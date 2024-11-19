@@ -4,7 +4,7 @@ function Toggle() {
   return (
     <label
       htmlFor="check"
-      className=" bg-gray-100 cursor-pointer relative w-20 h-10 rounded-full ml-auto self-center"
+      className=" bg-gray-100 cursor-pointer relative w-20 h-10 rounded-full"
     >
       <input
         type="checkbox"
