@@ -1,6 +1,8 @@
 import React from 'react'
-
-function GridTL() {
+type PropsPavillion={
+    pavillion: Array<boolean>;
+}
+function GridTL({pavillion}:PropsPavillion) {
   return (
     <div>GridTL</div>
   )

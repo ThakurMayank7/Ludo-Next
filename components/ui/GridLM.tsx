@@ -1,6 +1,10 @@
 import React from 'react'
 
-function GridLM() {
+
+type PropsPavillion={
+    pavillion: Array<boolean>;
+}
+function GridLM({pavillion}:PropsPavillion) {
   return (
     <div>GridLM</div>
   )

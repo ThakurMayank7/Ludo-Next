@@ -1,8 +1,12 @@
 import React from 'react'
 
-function GridLL() {
+type PropsPavillion={
+    pavillion: Array<boolean>;
+}
+
+function GridLL({pavillion}:PropsPavillion) {
   return (
-    <div>GridLL</div>
+    {}
   )
 }
 

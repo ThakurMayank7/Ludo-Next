@@ -1,24 +1,34 @@
 import React from 'react'
-import GridBox from './ui/GridBox';
+import GridTL from './ui/GridTL';
+import GridTM from './ui/GridTM';
+import GridTR from './ui/GridTR';
+import GridML from './ui/GridML';
+import GridMM from './ui/GridMM';
+import GridMR from './ui/GridMR';
+import GridLL from './ui/GridLL';
+import GridLM from './ui/GridLM';
+import GridLR from './ui/GridLR';
+
 
 type GridProps = {
-    darkMode: boolean;
-    clickBlock:(block:number)=>void;
+  pavillion: Array<boolean>;
+    // darkMode: boolean;
+    // clickBlock:(block:number)=>void;
 }
 
-function Grid({}:GridProps) {
+function Grid({pavillion}:GridProps) {
   return (
     <div className=' flex justify-center items-center p-1 md:p-2 lg:p-4 bg-gray-400'>
         <div className='grid grid-cols-3 grid-rows-3 aspect-square w-screen md:w-[50%] lg:w-[50%] gap-0.5 md:mx-auto'>
-          <GridBox type="upperL"/>
-          <GridBox type="upperM"/>
-          <GridBox type="upperR"/>
-          <GridBox type="middleL"/>
-          <GridBox type="middleM"/>
-          <GridBox type="middleR"/>
-          <GridBox type="lowerL"/>
-          <GridBox type="lowerM"/>
-          <GridBox type="lowerR"/>
+          <GridTL pavillion={pavillion[1]}/>
+          <GridTM/>
+          <GridTR pavillion={pavillion[2]}/>
+          <GridML/>
+          <GridMM/>
+          <GridMR/>
+          <GridLL pavillion={pavillion[0]}/>
+          <GridLM/>
+          <GridLR pavillion={pavillion[3]}/>
         </div>
     </div>
   )

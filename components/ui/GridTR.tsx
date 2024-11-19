@@ -1,6 +1,8 @@
 import React from 'react'
-
-function GridTR() {
+type PropsPavillion={
+    pavillion: Array<boolean>;
+}
+function GridTR({pavillion}:PropsPavillion) {
   return (
     <div>GridTR</div>
   )

@@ -11,12 +11,30 @@ export default function Home() {
   const ToggleDark=()=>{
     setDarkMode(!darkMode);
   }
+/*
+    0-->bottom  1-->left  2-->top 3-->right
+
+    then single from 1 to 18
+
+    0-red 1 green 2yellow 3 blue
+*/
+
+
+  const [board,setBoard]=useState();
+
+  const [pavillion,setPavillion]=useState([
+    [true,true,true,true],
+    [true,true,true,true],
+    [true,true,true,true],
+    [true,true,true,true]]);
+
+
 
   return (
     <div>
 
     <Header darkMode={darkMode} setDark={ToggleDark}/>
-    <Grid/>
+    <Grid pavillion={pavillion}/>
     </div>
   );
 }
