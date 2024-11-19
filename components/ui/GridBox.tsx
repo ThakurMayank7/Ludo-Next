@@ -1,4 +1,13 @@
 import React from "react";
+import GridTL from "./GridTL";
+import GridTM from "./GridTM";
+import GridTR from "./GridTR";
+import GridML from "./GridML";
+import GridMM from "./GridMM";
+import GridMR from "./GridMR";
+import GridLL from "./GridLL";
+import GridLM from "./GridLM";
+import GridLR from "./GridLR";
 
 type GridBoxProps = {
   type: string;
@@ -7,30 +16,30 @@ type GridBoxProps = {
 function GridBox({ type }: GridBoxProps) {
 
   switch (type) {
-    case "upperL":return(<h1>dfa</h1>);
+    case "upperL":return(<GridTL/>);
       break;
-    case "upperM":
+    case "upperM":return(<GridTM/>);
       break;
-    case "upperR":
+    case "upperR":return(<GridTR/>);
       break;
-    case "middleL":
+    case "middleL":return(<GridML/>);
       break;
-    case "middleM":
+    case "middleM":return(<GridMM/>);
       break;
-    case "middleR":
+    case "middleR":return(<GridMR/>);
       break;
-    case "lowerL":
+    case "lowerL":return(<GridLL/>);
       break;
-    case "lowerM":
+    case "lowerM":return(<GridLM/>);
       break;
-    case "lowerR":
+    case "lowerR":return(<GridLR/>);
       break;
 
     default:
       break;
   }
 
-  return <div className="bg-gray-800">{type}</div>;
+  return (<span className="text-red-600">Some Error Occurred</span>);
 }
 
 export default GridBox;

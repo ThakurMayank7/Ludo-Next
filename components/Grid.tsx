@@ -16,9 +16,9 @@ function Grid({}:GridProps) {
           <GridBox type="middleL"/>
           <GridBox type="middleM"/>
           <GridBox type="middleR"/>
-          <GridBox type="bottomL"/>
-          <GridBox type="bottomM"/>
-          <GridBox type="bottomR"/>
+          <GridBox type="lowerL"/>
+          <GridBox type="lowerM"/>
+          <GridBox type="lowerR"/>
         </div>
     </div>
   )
