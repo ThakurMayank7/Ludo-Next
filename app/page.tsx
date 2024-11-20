@@ -26,7 +26,7 @@ export default function Home() {
     [true,true,true,true]]);
 
     const [board,setBoard]=useState(
-      [[[],[]],[]]
+      []
     );
 
 
