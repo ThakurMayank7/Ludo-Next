@@ -1,10 +1,8 @@
 import React from 'react'
-type PropsPavillion={
-    pavillion: Array<boolean>;
-}
-function GridTM({pavillion}:PropsPavillion) {
+
+function GridTM() {
   return (
-    <div>GridTM</div>
+    <div></div>
   )
 }
 

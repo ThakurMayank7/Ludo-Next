@@ -19,15 +19,15 @@ export default function Home() {
     0-red 1 green 2yellow 3 blue
 */
 
-
-  const [board,setBoard]=useState();
-
   const [pavillion,setPavillion]=useState([
     [true,true,true,true],
     [true,true,true,true],
     [true,true,true,true],
     [true,true,true,true]]);
 
+    const [board,setBoard]=useState(
+      [[[],[]],[]]
+    );
 
 
   return (

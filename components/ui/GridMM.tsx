@@ -1,10 +1,8 @@
 import React from 'react'
-type PropsPavillion={
-    pavillion: Array<boolean>;
-}
-function GridMM({pavillion}:PropsPavillion) {
+
+function GridMM() {
   return (
-    <div>GridMM</div>
+    <div></div>
   )
 }
 
