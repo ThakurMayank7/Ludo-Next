@@ -7,6 +7,8 @@ import { PawnDetails } from "@/lib/types";
 import { useState } from "react";
 
 export default function Home() {
+  const [gameState, setGameState] = useState<"roll" | "playingTurn">("roll");
+
   /*
     0-->bottom  1-->left  2-->top 3-->right
 
@@ -146,30 +148,77 @@ export default function Home() {
     },
   ]);
 
-  const [turn,setTurn] = useState<"green" | "red" | "yellow" | "blue">("green");
+  const [turn, setTurn] = useState<"green" | "red" | "yellow" | "blue">(
+    "green"
+  );
+
+  const [turnNumber, setTurnNumber] = useState<number>(0);
+
+  const [turnListener, setTurnListener] = useState<
+    "green" | "red" | "yellow" | "blue" | null
+  >(null);
+
+  const [turnPlayed, setTurnPlayed] = useState<boolean>(false);
+
+  const checkWin = () => {};
 
   const playTurn = () => {
-    const turnNumber:number=getRandomNumber();
-    console.log(turnNumber);
+
+    if (turnPlayed) {
+      return;
+    }
+
+    const turnNumber: number = getRandomNumber();
+    setTurnNumber(turnNumber);
+    setTurnPlayed(true);
+
+git add
+
+
+
+    setTimeout(() => {
+      setTurnPlayed(false);
+      console.log("Event triggered after 3 seconds!");
+    }, 3000);
   };
 
   return (
-    <div className="flex flex-row text-white">
+    <div className="flex flex-row text-black">
       <div className="ml-auto flex flex-col mr-4">
         <div className="mb-auto mt-2">
-          <DiceBox turn={turn} color="green" />
+          <DiceBox
+            turn={turn}
+            color="green"
+            playTurn={playTurn}
+            turnNumber={turnNumber}
+          />
         </div>
         <div className="mt-auto mb-2">
-          <DiceBox turn={turn} color="red" />
+          <DiceBox
+            turn={turn}
+            color="red"
+            playTurn={playTurn}
+            turnNumber={turnNumber}
+          />
         </div>
       </div>
       <Grid pawns={pawns} />
       <div className="mr-auto flex flex-col ml-4">
         <div className="mb-auto mt-2">
-          <DiceBox turn={turn} color="yellow" />
+          <DiceBox
+            turn={turn}
+            color="yellow"
+            playTurn={playTurn}
+            turnNumber={turnNumber}
+          />
         </div>
         <div className="mt-auto mb-2">
-          <DiceBox turn={turn} color="blue" />
+          <DiceBox
+            turn={turn}
+            color="blue"
+            playTurn={playTurn}
+            turnNumber={turnNumber}
+          />
         </div>
       </div>
     </div>
