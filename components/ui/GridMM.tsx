@@ -2,7 +2,7 @@ import React from 'react'
 
 function GridMM() {
   return (
-    <div></div>
+    <div className='aspect-square border-2 border-black'></div>
   )
 }
 

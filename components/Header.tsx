@@ -1,37 +1,15 @@
-'use client';
+"use client";
 
-import React from 'react'
-import Toggle from './ui/Toggle'
+import React from "react";
 
-type HeaderProps=
-    {
-        darkMode: boolean;
-        setDark:()=>void;
-    }
-
-
-
-function Header({darkMode,setDark}:HeaderProps) {
-
-    const setDarkMode=()=>{
-        setDark();
-    }
-
+function Header() {
   return (
-    <div className="bg-gray-600 h-20 w-screen flex">
-        <span className="text-white text-6xl self-center mx-auto ">Ludo</span>
-
-        {/* container for toggle button */}
-        <div className="flex-row ml-auto self-center pr-6">
-            <div className='flex self-start'>
-            <Toggle setDarkMode={setDarkMode}/>
-            </div>
-                
-            <span className='self-end'>{darkMode?"Light Mode":"Dark Mode"}</span>
-        </div>
-
-    </div>
-  )
+    <header className="sticky top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
+      <div className="container mx-auto px-4">
+        <h1 className="text-center text-5xl py-2 text-gray-300">Ludo</h1>
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
