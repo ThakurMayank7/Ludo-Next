@@ -12,19 +12,18 @@ import { PawnDetails } from "@/lib/types";
 
 type GridProps = {
   pawns: PawnDetails[];
-  // clickBlock:(block:number)=>void;
 };
 
 function Grid({ pawns }: GridProps) {
   return (
-    <div className="w-[90vh] aspect-square mx-auto bg-white my-1">
+    <div className="w-[90vh] aspect-square bg-white my-1">
       <div className="h-full w-full flex flex-col">
         <div className="flex-[6] flex flex-row">
           <div className="flex-[6]">
             <GridTL pawns={pawns} />
           </div>
           <div className="flex-[3]">
-            <GridTM />
+            <GridTM pawns={pawns} />
           </div>
           <div className="flex-[6]">
             <GridTR pawns={pawns} />
@@ -33,14 +32,14 @@ function Grid({ pawns }: GridProps) {
 
         <div className="flex-[3] flex flex-row">
           <div className="flex-[6]">
-            <GridML />
+            <GridML pawns={pawns} />
           </div>
           <div className="flex-[3]">
             <GridMM />
-          </div>
+            </div>
           <div className="flex-[6]">
-            <GridMR />
-          </div>
+            <GridMR pawns={pawns} />
+            </div>
         </div>
 
         <div className="flex-[6] text-white flex flex-row">
@@ -48,27 +47,14 @@ function Grid({ pawns }: GridProps) {
             <GridLL pawns={pawns} />
           </div>
           <div className="flex-[3]">
-            <GridLM />
-          </div>
+            <GridLM pawns={pawns} />
+            </div>
           <div className="flex-[6]">
             <GridLR pawns={pawns} />
           </div>
         </div>
       </div>
     </div>
-    // <div className=' flex justify-center items-center p-1 md:p-2 lg:p-4'>
-    //     <div className='grid grid-cols-3 grid-rows-3 aspect-square w-screen md:w-[50%] lg:w-[50%] gap-0.5 md:mx-auto'>
-    //       <GridTL pavillion={pavillion[1]}/>
-    //       <GridTM/>
-    //       <GridTR pavillion={pavillion[2]}/>
-    //       <GridML/>
-    //       <GridMM/>
-    //       <GridMR/>
-    //       <GridLL pavillion={pavillion[0]}/>
-    //       <GridLM/>
-    //       <GridLR pavillion={pavillion[3]}/>
-    //     </div>
-    // </div>
   );
 }
 

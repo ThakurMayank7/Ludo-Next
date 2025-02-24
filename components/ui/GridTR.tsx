@@ -1,6 +1,6 @@
 import { PawnDetails } from "@/lib/types";
-import YellowPawn from "@/resources/pawns/YellowPawn";
 import React from "react";
+import { Pawn } from "./Pawn";
 type PropsPavillion = {
   pawns: PawnDetails[];
 };
@@ -11,7 +11,7 @@ function GridTR({ pawns }: PropsPavillion) {
         {pawns.find(
           (pawn) => pawn.color === "yellow" && pawn.id === 1 && !pawn.unlocked
         ) ? (
-          <YellowPawn />
+          <Pawn pavillion color="yellow" />
         ) : (
           ""
         )}
@@ -20,7 +20,7 @@ function GridTR({ pawns }: PropsPavillion) {
         {pawns.find(
           (pawn) => pawn.color === "yellow" && pawn.id === 2 && !pawn.unlocked
         ) ? (
-          <YellowPawn />
+          <Pawn pavillion color="yellow" />
         ) : (
           ""
         )}
@@ -29,7 +29,7 @@ function GridTR({ pawns }: PropsPavillion) {
         {pawns.find(
           (pawn) => pawn.color === "yellow" && pawn.id === 3 && !pawn.unlocked
         ) ? (
-          <YellowPawn />
+          <Pawn pavillion color="yellow" />
         ) : (
           ""
         )}
@@ -38,7 +38,7 @@ function GridTR({ pawns }: PropsPavillion) {
         {pawns.find(
           (pawn) => pawn.color === "yellow" && pawn.id === 4 && !pawn.unlocked
         ) ? (
-          <YellowPawn />
+          <Pawn pavillion color="yellow" />
         ) : (
           ""
         )}

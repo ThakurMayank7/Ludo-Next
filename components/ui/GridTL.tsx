@@ -1,6 +1,6 @@
 import { PawnDetails } from "@/lib/types";
-import GreenPawn from "@/resources/pawns/GreenPawn";
 import React from "react";
+import { Pawn } from "./Pawn";
 type PropsPavillion = {
   pawns: PawnDetails[];
 };
@@ -11,7 +11,7 @@ function GridTL({ pawns }: PropsPavillion) {
         {pawns.find(
           (pawn) => pawn.color === "green" && pawn.id === 1 && !pawn.unlocked
         ) ? (
-          <GreenPawn />
+          <Pawn pavillion color="green" />
         ) : (
           ""
         )}
@@ -20,7 +20,7 @@ function GridTL({ pawns }: PropsPavillion) {
         {pawns.find(
           (pawn) => pawn.color === "green" && pawn.id === 2 && !pawn.unlocked
         ) ? (
-          <GreenPawn />
+          <Pawn pavillion color="green" />
         ) : (
           ""
         )}
@@ -29,7 +29,7 @@ function GridTL({ pawns }: PropsPavillion) {
         {pawns.find(
           (pawn) => pawn.color === "green" && pawn.id === 3 && !pawn.unlocked
         ) ? (
-          <GreenPawn />
+          <Pawn pavillion color="green" />
         ) : (
           ""
         )}
@@ -38,7 +38,7 @@ function GridTL({ pawns }: PropsPavillion) {
         {pawns.find(
           (pawn) => pawn.color === "green" && pawn.id === 4 && !pawn.unlocked
         ) ? (
-          <GreenPawn />
+          <Pawn pavillion color="green" />
         ) : (
           ""
         )}
